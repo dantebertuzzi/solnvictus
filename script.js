@@ -19,7 +19,7 @@ function showTooltip(event, message) {
 
     setTimeout(function() {
         document.body.removeChild(tooltip);
-    }, 3000); // Exibe o tooltip por 3 segundos
+    }, 3000);
 }
 
 function copyToClipboard(text) {
@@ -42,10 +42,8 @@ function generatePasswords() {
     const excludeChars = document.getElementById('excludeCharsOption').value;
     let quantity = parseInt(document.getElementById('quantityOption').value);
 
-    // Limita a quantidade máxima de senhas para 10
     quantity = Math.min(quantity, 10);
 
-    // Verifica se pelo menos uma opção de checkbox está marcada
     if (!specialChars && !numbers && !uppercase && !lowercase) {
         alert('Please select at least one option to generate passwords.');
         return;
@@ -57,13 +55,12 @@ function generatePasswords() {
     if (numbers) charset += '0123456789';
     if (specialChars) charset += '!@#$%^&*()_+~`|}{[]:;?><,./-=';
 
-    // Remove os caracteres a serem excluídos do conjunto de caracteres
     excludeChars.split('').forEach(char => {
         charset = charset.replace(char, '');
     });
 
     const passwordsContainer = document.getElementById('passwordsContainer');
-    passwordsContainer.innerHTML = ''; // Limpa o conteúdo anterior
+    passwordsContainer.innerHTML = '';
 
     for (let i = 0; i < quantity; i++) {
         let password = '';
@@ -74,9 +71,9 @@ function generatePasswords() {
         passwordInput.type = 'text';
         passwordInput.value = password;
         passwordInput.readOnly = true;
-        passwordInput.style.display = 'block'; // Define o estilo para exibir um abaixo do outro
-        passwordInput.style.margin = '0 auto'; // Centraliza o input horizontalmente
-        passwordInput.style.textAlign = 'center'; // Centraliza o texto dentro do input
+        passwordInput.style.display = 'block';
+        passwordInput.style.margin = '0 auto';
+        passwordInput.style.textAlign = 'center';
         passwordInput.addEventListener('click', function(event) {
             copyToClipboard(this.value);
             showTooltip(event, 'Senha copiada!');
@@ -85,8 +82,6 @@ function generatePasswords() {
     }
 }
 
-
-// Adiciona o evento de clique ao botão "Generate Password"
 document.getElementById('generatePasswordButton').addEventListener('click', generatePasswords);
 
 
@@ -121,8 +116,6 @@ function matrix() {
 
 setInterval(matrix, 50);
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     var generatePasswordButton = document.getElementById('generatePasswordButton');
     var logo = document.getElementById('siteLogo');
@@ -132,6 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(function() {
             logo.classList.remove('logo-shine');
-        }, 1000); // Tempo de duração da animação em milissegundos
+        }, 1000);
     });
 });
