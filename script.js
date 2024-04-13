@@ -76,7 +76,7 @@ function generatePasswords() {
         passwordInput.style.textAlign = 'center';
         passwordInput.addEventListener('click', function(event) {
             copyToClipboard(this.value);
-            showTooltip(event, 'Senha copiada!');
+            showTooltip(event, 'Password copied');
         });
         passwordsContainer.appendChild(passwordInput);
     }
