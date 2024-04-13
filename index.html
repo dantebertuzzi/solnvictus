@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>solnvictus: password generator</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="https://raw.githubusercontent.com/dantebertuzzi/solnvictus/main/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="canonical" href="https://www.havagas.net/">
     <meta name="description" content="solnvictus: fast and strong password generator">
     <meta name="keywords" content="password generator, secure passwords, password strength, random password, password manager, password security, password complexity, passphrase generator, online password generator">
     <meta property="og:type" content="website">
     <meta property="og:title" content="solnvictus: fast and strong password generator">
     <meta property="og:description" content="solnvictus: fast and strong password generator.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/dantebertuzzi/havagas/main/logo.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dantebertuzzi/solnvictus/main/logo_300x.png">
     <style>
         body {
             margin: 0;
@@ -22,7 +21,7 @@
             width: 100vw;
             overflow: hidden;
             position: relative;
-            overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
+            overflow-y: auto;
         }
         canvas {
             position: fixed;
@@ -37,13 +36,12 @@
     <div class="content-container">
         <header>
             <div class="logo-container">
-                <img src="logo4.png" alt="Logo do Site" class="logo" id="siteLogo">
+                <img src="https://raw.githubusercontent.com/dantebertuzzi/solnvictus/main/logo_300x.png" alt="Logo do Site" class="logo" id="siteLogo">
             </div>
             <div class="phrase-container">
                 <p class="phrase"><em><strong>Solnvictus password generator</strong></em></p>
             </div>
         </header>
-        
     <main>
         <div id="passwordOptions" class="centered-container">
             <label for="lengthOption">Password length:</label>
@@ -62,7 +60,6 @@
             <label for="quantityOption">Number of passwords:</label>
             <input type="number" id="quantityOption" min="1" max="10" value="1">
         </div>
-        
         <button id="generatePasswordButton">Generate Password</button>
         <div id="passwordsContainer" class="centered-container passwords-container">
         </div>
