@@ -1,0 +1,152 @@
+body {
+    background-color: #27313f;
+    color: #fff;
+    font-family: Consolas, monospace; /* Definindo a fonte Consolas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 100vh; /* Defina a altura mínima como 100% da viewport */
+    overflow-x: hidden; /* Oculte a rolagem horizontal */}
+
+@media (max-width: 768px) {
+    .passwords-container {
+        max-height: 50vh; /* Defina uma altura máxima menor para dispositivos móveis */
+    }
+}
+
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-container {
+    display: inline-block;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.centered-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#passwordOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#passwordOptions label {
+    margin-bottom: 5px;
+}
+
+#passwordOptions input[type="number"] {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#passwordInput {
+    width: auto; /* Ajuste para permitir que o campo de entrada redimensione com base no conteúdo */
+    padding: 8px; /* Adiciona espaço interno ao campo de entrada */
+    padding-right: 50px; /* Adiciona espaço à esquerda do texto dentro do campo de entrada */
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-image: url('https://img.icons8.com/material/24/FFFFFF/copy--v1.png'); /* Define a imagem de fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: calc(100% - 10px) center; /* Define a posição da imagem no input */
+    background-size: 20px; /* Define o tamanho da imagem */
+    background-color: #3e4e64;
+    color: #fffefe;
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o texto dentro do campo de entrada */
+}
+
+input[type="text"] {
+    font-family: Consolas, monospace; /* Aplicando a fonte Consolas aos inputs */
+}
+
+
+#generatePasswordButton {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+    background-color: #323e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#generatePasswordButton:hover {
+    background-color: #f3cd00;
+    color: #020202;
+}
+
+#copyPasswordLink {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#copyPasswordLink:hover {
+    text-decoration: underline;
+}
+
+#lengthOption {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#lengthDisplay {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(14, 14, 14, 0.8); /* Opacidade */
+    padding: 20px;
+    border-radius: 20px; /* Borda arredondada */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra */
+    max-width: 80%; /* Defina a largura máxima para evitar que o conteúdo se estenda demais em telas grandes */
+}
+
+.footer {
+    align-items: center;
+}
+
+
+
+.logo-shine {
+    animation: shine 1s forwards;
+}
+
+@keyframes shine {
+    0% {
+        filter: brightness(0.8); /* Início mais suave */
+    }
+    50% {
+        filter: brightness(1.5); /* Pico do brilho */
+    }
+    100% {
+        filter: brightness(1); /* Final mais suave */
+    }
+}
+
+.passwords-container {
+    max-height: 80vh;
+    overflow-y: auto;
+}

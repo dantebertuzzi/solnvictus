@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solnvictus: password generator</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="canonical" href="https://www.havagas.net/">
+    <meta name="description" content="solnvictus: fast and strong password generator">
+    <meta name="keywords" content="password generator, secure passwords, password strength, random password, password manager, password security, password complexity, passphrase generator, online password generator">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="solnvictus: fast and strong password generator">
+    <meta property="og:description" content="solnvictus: fast and strong password generator.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dantebertuzzi/havagas/main/logo.png">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            overflow-y: auto; /* Adicione a barra de rolagem vertical quando necessário */
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canv"></canvas>
+    <div class="content-container">
+        <header>
+            <div class="logo-container">
+                <img src="logo4.png" alt="Logo do Site" class="logo" id="siteLogo">
+            </div>
+            <div class="phrase-container">
+                <p class="phrase"><em><strong>Solnvictus password generator</strong></em></p>
+            </div>
+        </header>
+        
+    <main>
+        <div id="passwordOptions" class="centered-container">
+            <label for="lengthOption">Password length:</label>
+            <input type="range" id="lengthOption" min="3" max="100" value="8" oninput="updateLengthDisplay(this.value)">
+            <span id="lengthDisplay">8</span>            
+            <label for="specialCharsOption">Include special characters:</label>
+            <input type="checkbox" id="specialCharsOption">
+            <label for="numbersOption">Include numbers:</label>
+            <input type="checkbox" id="numbersOption" checked>
+            <label for="uppercaseOption">Include uppercase letters:</label>
+            <input type="checkbox" id="uppercaseOption" checked>
+            <label for="lowercaseOption">Include lowercase letters:</label>
+            <input type="checkbox" id="lowercaseOption" checked>
+            <label for="excludeCharsOption">Exclude characters:</label>
+            <input type="text" id="excludeCharsOption" placeholder="Ex: abc123">
+            <label for="quantityOption">Number of passwords:</label>
+            <input type="number" id="quantityOption" min="1" max="10" value="1">
+        </div>
+        
+        <button id="generatePasswordButton">Generate Password</button>
+        <div id="passwordsContainer" class="centered-container passwords-container">
+        </div>
+        <footer class="footer">
+            <p>&copy; 2024 All rights reserved.</p>
+        </footer>
+    </main>
+</div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
