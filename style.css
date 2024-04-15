@@ -1,7 +1,7 @@
 body {
     background-color: #27313f;
     color: #fff;
-    font-family: Consolas, monospace; /* Definindo a fonte Consolas */
+    font-family: Arial, monospace; /* Definindo a fonte Arial */
     margin: 0;
     padding: 0;
     display: flex;
@@ -73,6 +73,7 @@ header {
 
 input[type="text"] {
     font-family: Consolas, monospace; /* Aplicando a fonte Consolas aos inputs */
+    font-size: large;
 }
 
 
